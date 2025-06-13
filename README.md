@@ -66,6 +66,37 @@ This will:
 4. Click into each challenge to get required cards
 5. Save data to `challenges_YYYY-MM-DD.json`
 
+### Database Integration
+
+Store your scraped data in Supabase for better querying and analysis:
+
+#### 1. Create Database Tables
+
+**Option A: Using JavaScript (recommended)**
+```bash
+node create-supabase-tables.js
+```
+
+**Option B: Using SQL directly**
+Copy the contents of `supabase-tables.sql` and run it in your Supabase SQL Editor.
+
+#### 2. Insert Challenge Data
+
+```bash
+# Insert latest challenge file automatically
+node insertChallengeData.js
+
+# Or specify a specific file
+node insertChallengeData.js challenges_2025-06-12.json
+```
+
+#### 3. Query Your Data
+
+The database includes three main components:
+- `challenges` table: Main challenge information
+- `required_cards` table: Cards required for each challenge
+- `challenges_with_cards` view: Combined data for easy querying
+
 ### Data Structure
 
 Each scraped challenge includes:
