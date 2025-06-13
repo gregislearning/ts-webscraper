@@ -38,6 +38,17 @@ npm install
 yarn install
 ```
 
+3. **Set up environment variables**:
+```bash
+cp env.example .env
+```
+Then edit `.env` with your actual credentials:
+- `NBA_TOPSHOT_EMAIL`: Your NBA Top Shot login email
+- `NBA_TOPSHOT_PASSWORD`: Your NBA Top Shot password
+- `SUPABASE_URL`: Your Supabase project URL (optional)
+- `SUPABASE_ANON_KEY`: Your Supabase anonymous key (optional)
+- `OPENAI_API_KEY`: Your OpenAI API key (optional)
+
 ## Usage
 
 ### Main Challenge Scraper
@@ -153,6 +164,16 @@ The scraper includes comprehensive error handling:
 ## License
 
 This project is for educational purposes. Please respect NBA Top Shot's terms of service and rate limits.
+
+## Security
+
+🔒 **Important Security Notes:**
+
+- **Never commit your `.env` file** - it contains sensitive credentials
+- **Use environment variables** for all API keys and passwords
+- **Rotate your credentials** if they've been exposed
+- **Use strong, unique passwords** for your NBA Top Shot account
+- **Enable 2FA** on your NBA Top Shot account when possible
 
 ## Disclaimer
 

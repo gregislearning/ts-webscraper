@@ -19,6 +19,9 @@ ENV/
 .env.test.local
 .env.production.local
 
+# Keep the example file but exclude actual env files
+!env.example
+
 # Logs
 logs
 *.log

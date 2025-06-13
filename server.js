@@ -1,12 +1,19 @@
 import { createClient } from "@supabase/supabase-js";
 import { OpenAI } from "openai";
 
-const supabaseUrl = "https://azrdgjhkjkizrologhiy.supabase.co";
-const supabaseKey =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImF6cmRnamhramtpenJvbG9naGl5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDIwOTk1MDEsImV4cCI6MjAxNzY3NTUwMX0.CattFx1UV5odxvxsku1dHvyJsTpa6_SS791y5cnPM7Y";
+const supabaseUrl = process.env.SUPABASE_URL;
+const supabaseKey = process.env.SUPABASE_ANON_KEY;
+const openAIKey = process.env.OPENAI_API_KEY;
+
+if (!supabaseUrl || !supabaseKey) {
+  throw new Error("SUPABASE_URL and SUPABASE_ANON_KEY environment variables are required");
+}
+
+if (!openAIKey) {
+  throw new Error("OPENAI_API_KEY environment variable is required");
+}
+
 const supabase = createClient(supabaseUrl, supabaseKey);
-const openAIKey =
-  "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";
 
 async function fetchMoments() {
   try {

@@ -4,18 +4,29 @@ export async function performLogin(page) {
     await loginButtons[1].click();
     await page.waitForNavigation({ waitUntil: "load" });
     await new Promise((resolve) => setTimeout(resolve, 5000));
+    
     const emailInput = await page.$('input[type="email"]');
     if (emailInput) {
-      await emailInput.type("gball712@yahoo.com");
+      const email = process.env.NBA_TOPSHOT_EMAIL;
+      if (!email) {
+        throw new Error("NBA_TOPSHOT_EMAIL environment variable is required");
+      }
+      await emailInput.type(email);
     } else {
       console.log("Email input not found");
     }
+    
     const passwordInput = await page.$('input[type="password"]');
     if (passwordInput) {
-      await passwordInput.type("Nbat3stshot");
+      const password = process.env.NBA_TOPSHOT_PASSWORD;
+      if (!password) {
+        throw new Error("NBA_TOPSHOT_PASSWORD environment variable is required");
+      }
+      await passwordInput.type(password);
     } else {
       console.log("Password input not found");
     }
+    
     const loginButton = await page.$("#login");
     if (loginButton) {
       await loginButton.click();
