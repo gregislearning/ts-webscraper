@@ -156,4 +156,4 @@ This project is for educational purposes. Please respect NBA Top Shot's terms of
 
 ## Disclaimer
 
-This scraper is intended for educational and research purposes only. Users are responsible for complying with NBA Top Shot's terms of service and applicable laws. Use responsibly and respect rate limits. 
+This scraper is intended for educational and research purposes only. Users are responsible for complying with NBA Top Shot's terms of service and applicable laws. Use responsibly and respect rate limits.
