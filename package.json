@@ -6,7 +6,8 @@
   "license": "MIT",
   "dependencies": {
     "@supabase/supabase-js": "^2.45.3",
-    "openai": "^4.68.1",
+    "dotenv": "^16.5.0",
+    "openai": "^4.104.0",
     "proxy-chain": "^2.5.3",
     "puppeteer": "^22.6.0",
     "puppeteer-extra": "^3.3.6",
