@@ -7,7 +7,11 @@
   "dependencies": {
     "@supabase/supabase-js": "^2.45.3",
     "dotenv": "^16.5.0",
+<<<<<<< Updated upstream
     "openai": "^4.104.0",
+=======
+    "openai": "^4.68.1",
+>>>>>>> Stashed changes
     "proxy-chain": "^2.5.3",
     "puppeteer": "^22.6.0",
     "puppeteer-extra": "^3.3.6",
